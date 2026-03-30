@@ -197,6 +197,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &kp KP_N0        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DOT    &trans
                         &trans  &trans  &trans    &trans           &trans           &trans
             >;
+
+            label = "Keypad";
         };
 
         Symbols {
@@ -206,6 +208,8 @@
 &trans  &kp LEFT_PARENTHESIS  &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LESS_THAN  &trans         &trans     &kp GREATER_THAN  &kp RIGHT_BRACE  &kp RIGHT_BRACKET     &kp RIGHT_PARENTHESIS  &trans
                                               &trans            &trans         &trans         &trans     &trans            &trans
             >;
+
+            label = "Symbols";
         };
 
         Navigation {
@@ -215,6 +219,8 @@
 &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans        &trans     &trans         &trans
                         &trans  &trans  &trans    &trans    &trans    &trans
             >;
+
+            label = "Navigation";
         };
 
         System {
@@ -224,6 +230,8 @@
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4      &bt BT_CLR_ALL  &trans       &trans  &trans  &trans   &trans
                                     &trans        &trans        &trans            &trans          &trans       &trans
             >;
+
+            label = "System";
         };
     };
 };

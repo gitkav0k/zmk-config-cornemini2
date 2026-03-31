@@ -9,61 +9,6 @@
 #define EXTRA 4
 
 / {
-    behaviors {
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-
-            quick-tap-ms = <180>;
-            require-prior-idle-ms = <120>; /* tune to taste */
-        };
-
-        para: para {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp RIGHT_PARENTHESIS>;
-        };
-
-        caps: caps {
-            compatible = "zmk,behavior-caps-word";
-            #binding-cells = <0>;
-            continue-list = <MINUS BACKSPACE>;
-        };
-
-        paraless: paraless {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp LEFT_PARENTHESIS>, <&kp LESS_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        paragreat: paragreat {
-            compatible = "zmk,behavior-mod-morph";
-            bindings = <&kp RIGHT_PARENTHESIS>, <&kp GREATER_THAN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-    };
-
-    macros {
-        browsertab: browsertab {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp TAB>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
-    };
-
     combos {
         compatible = "zmk,combos";
 
@@ -88,10 +33,10 @@
             // | GUI | CTRL | SHFT | LWR | SPC |   | ENT | RSE  | BKSP | ALT | ESC |
 
             bindings = <
-&trans  &lt 4 Q             &kp W           &kp E           &kp R          &kp T        &kp Y    &kp U      &kp I            &kp O            &kp P                   &trans
-&trans  &hm LEFT_CONTROL A  &hm LEFT_ALT S  &hm LEFT_GUI D  &lt 2 F        &lt 3 G      &lt 3 H  &lt 2 J    &hm RIGHT_GUI K  &hm RIGHT_ALT L  &hm RIGHT_CONTROL SEMI  &trans
-&trans  &mt LEFT_SHIFT Z    &kp X           &kp C           &kp V          &kp B        &kp N    &kp M      &kp COMMA        &kp DOT          &mt RIGHT_SHIFT SLASH   &trans
-                                            &mo 1           &kp BACKSPACE  &lt 1 TAB    &kp RET  &kp SPACE  &mo 4
+&trans  &lt 4 Q           &kp W  &kp E  &kp R          &kp T        &kp Y    &kp U      &kp I      &kp O    &kp P                  &trans
+&trans  &none             &none  &none  &lt 2 F        &lt 3 G      &lt 3 H  &lt 2 J    &none      &none    &none                  &trans
+&trans  &mt LEFT_SHIFT Z  &kp X  &kp C  &kp V          &kp B        &kp N    &kp M      &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH  &trans
+                                 &mo 1  &kp BACKSPACE  &lt 1 TAB    &kp RET  &kp SPACE  &mo 4
             >;
         };
 
